@@ -12,41 +12,78 @@ From inside the `Led`{:class='microbitled'} menu, you can find the `plot bar gra
 
 Place the `plot bar graph`{:class='microbitled'} block inside an event block or a loop block. The `every`{:class='microbitloops'} block has been used in this example.
 
-<div style="position:relative;height:calc(100px + 5em);width:100%;overflow:hidden;"><iframe style="position:relative;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/---codeembed#pub:_00HP3DDHwCK8" allowfullscreen="allowfullscreen" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe></div>
+```microbit
+loops.everyInterval(500, function () {
+    led.plotBarGraph(
+    0,
+    0
+    )
+})
+```
 
 From the `Input`{:class='microbitinput'} menu, you can find a sensor or input to measure with your graph. 
 
 The `acceleration`{:class='microbitinput'} block has been used in this example.
 
-Place the `acceleration`{:class='microbitinput'} block or any other sensor/input block inside the `0` to the left on the `plot bar graph`{:class='microbitled'} block.
+Place the `acceleration`{:class='microbitinput'} block inside the `0` to the left of the `plot bar graph`{:class='microbitled'} block.
 
-<div style="position:relative;height:calc(100px + 5em);width:100%;overflow:hidden;"><iframe style="position:relative;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/---codeembed#pub:_agmFUzP71f2Y" allowfullscreen="allowfullscreen" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe></div>
+```microbit
+loops.everyInterval(500, function () {
+    led.plotBarGraph(
+    input.acceleration(Dimension.X),
+    0
+    )
+})
+```
 
-Inside the 0 to the right of the `plot bar graph`{:class='microbitled'} block, you will need to write the maximum value to be recorded to the graph.
+Inside the `0` to the right of the `plot bar graph`{:class='microbitled'} block, you will need to write the maximum value to be recorded to the graph.
 
 In this example, 1023 mg has been used. This value will be different for other sensors.
 
-<div style="position:relative;height:calc(100px + 5em);width:100%;overflow:hidden;"><iframe style="position:relative;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/---codeembed#pub:_EgAL7zTWfDjT" allowfullscreen="allowfullscreen" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe></div>
+```microbit
+loops.everyInterval(500, function () {
+    led.plotBarGraph(
+    input.acceleration(Dimension.X),
+    1023
+    )
+})
+```
 
-The leds on the micro:bit will light up to show the value of the sensor being recorded against the maximum value field.
+The LEDs on the micro:bit will light up to show the value of the sensor being recorded against the maximum value field.
 
-![The led display lighting up to show the values from the sensore being recorded'.](images/led-diasplay.gif)
+![The LED display lighting up to show the values from the sensor being recorded.](images/led-display.gif)
 
-To view the graph being plotted, click on the Advanced tab on your menu toolbox.
+To view the graph being plotted, click on the Advanced tab at the bottom of your Toolbox.
 
-This will expand to showmore menu options.
+This will expand to show more menu options.
 
 Click on the Serial menu to find the `serial write line` block.
 
 Place it below the `plot bar graph`{:class='microbitled'} block.
 
-<div style="position:relative;height:calc(100px + 5em);width:100%;overflow:hidden;"><iframe style="position:relative;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/---codeembed#pub:_EMsKa86jp5y3" allowfullscreen="allowfullscreen" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe></div>
+```microbit
+loops.everyInterval(500, function () {
+    led.plotBarGraph(
+    input.acceleration(Dimension.X),
+    1023
+    )
+    serial.writeLine("")
+})
+```
 
-From the `Input`{:class='microbitinput'} menu, find the acceleration`{:class='microbitinput'} block.
+From the `Input`{:class='microbitinput'} menu, find the `acceleration`{:class='microbitinput'} block.
 
 Place it inside the empty field on the `serial write line` block.
 
-<div style="position:relative;height:calc(100px + 5em);width:100%;overflow:hidden;"><iframe style="position:relative;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/---codeembed#pub:_cpbb16TXdWij" allowfullscreen="allowfullscreen" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe></div>
+```microbit
+loops.everyInterval(500, function () {
+    led.plotBarGraph(
+    input.acceleration(Dimension.X),
+    1023
+    )
+    serial.writeLine("" + (input.acceleration(Dimension.X)))
+})
+```
 
 You can connect your micro:bit to your computer to view your graph.
 
