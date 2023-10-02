@@ -1,8 +1,6 @@
-You can plot a bar graph to record data in the real world using the micro:bit. 
+You can plot a bar graph to display data from the sensors on the LEDs.
 
-On the V2, you can use inputs and sensors or on the V1, the input can measure data.
-
-### Plot bar graph for V2 users
+### Plot bar graph
 
 In this example, the accelerometer has been used as the sensor for plotting your bar graph.
 
@@ -52,41 +50,3 @@ loops.everyInterval(500, function () {
 The LEDs on the micro:bit will light up to show the value of the sensor being recorded against the maximum value field.
 
 ![The LED display lighting up to show the values from the sensor being recorded.](images/led-display.gif)
-
-To view the graph being plotted, click on the Advanced tab at the bottom of your Toolbox.
-
-This will expand to show more menu options.
-
-Click on the Serial menu to find the `serial write line` block.
-
-Place it below the `plot bar graph`{:class='microbitled'} block.
-
-```microbit
-loops.everyInterval(500, function () {
-    led.plotBarGraph(
-    input.acceleration(Dimension.X),
-    1023
-    )
-    serial.writeLine("")
-})
-```
-
-From the `Input`{:class='microbitinput'} menu, find the `acceleration`{:class='microbitinput'} block.
-
-Place it inside the empty field on the `serial write line` block.
-
-```microbit
-loops.everyInterval(500, function () {
-    led.plotBarGraph(
-    input.acceleration(Dimension.X),
-    1023
-    )
-    serial.writeLine("" + (input.acceleration(Dimension.X)))
-})
-```
-
-You can connect your micro:bit to your computer to view your graph.
-
-You can also view the graph by clicking `show data` on the simulator.
-
-### Plot bar graph for V1 users
