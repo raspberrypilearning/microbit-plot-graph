@@ -1,12 +1,12 @@
-You can plot a bar graph to display data from the sensors on the LEDs.
+You can plot a bar graph on the LEDs to show values from the sensors.
 
 ### Plot bar graph
 
-In this example, the accelerometer has been used as the sensor for plotting your bar graph.
+In this example, accelerometer values are plotted as a bar graph.
 
 From inside the `Led`{:class='microbitled'} menu, you can find the `plot bar graph`{:class='microbitled'} block.
 
-<img src="images/led-menu.png" alt="The led menu with the 'plot bar graph' block highlighted." width="350"/>
+<img src="images/led-menu.png" alt="The Led menu with the 'plot bar graph' block highlighted." width="350"/>
 
 Place the `plot bar graph`{:class='microbitled'} block inside an event block or a loop block. The `every`{:class='microbitloops'} block has been used in this example.
 
@@ -19,9 +19,7 @@ loops.everyInterval(500, function () {
 })
 ```
 
-From the `Input`{:class='microbitinput'} menu, you can find a sensor or input to measure with your graph. 
-
-The `acceleration`{:class='microbitinput'} block has been used in this example.
+From the `Input`{:class='microbitinput'} menu, you can find the `acceleration`{:class='microbitinput'} block.
 
 Place the `acceleration`{:class='microbitinput'} block inside the `0` to the left of the `plot bar graph`{:class='microbitled'} block.
 
@@ -34,9 +32,9 @@ loops.everyInterval(500, function () {
 })
 ```
 
-Inside the `0` to the right of the `plot bar graph`{:class='microbitled'} block, you will need to write the maximum value to be recorded to the graph.
+Inside the `0` to the right of the `plot bar graph`{:class='microbitled'} block, you will need to add the maximum value to be plotted on the graph.
 
-In this example, 1023 mg has been used. This value will be different for other sensors.
+In this example, 1023 has been used. This value is the maximum mg that can be sensed, but this value will be different for other sensors.
 
 ```microbit
 loops.everyInterval(500, function () {
@@ -47,6 +45,6 @@ loops.everyInterval(500, function () {
 })
 ```
 
-The LEDs on the micro:bit will light up to show the value of the sensor being recorded against the maximum value field.
+The LEDs on the micro:bit will light up to show the value of the sensor being recorded up to the maximum value field.
 
 ![The LED display lighting up to show the values from the sensor being recorded.](images/led-display.gif)
