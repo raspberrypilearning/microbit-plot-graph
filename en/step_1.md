@@ -21,7 +21,7 @@ loops.everyInterval(500, function () {
 
 From the `Input`{:class='microbitinput'} menu, get the `acceleration`{:class='microbitinput'} block.
 
-Place the `acceleration`{:class='microbitinput'} block inside the `0` on the left of the `plot bar graph`{:class='microbitled'} block.
+Place the `acceleration`{:class='microbitinput'} block inside the first `0` in the `plot bar graph`{:class='microbitled'} block.
 
 ```microbit
 loops.everyInterval(500, function () {
@@ -32,7 +32,7 @@ loops.everyInterval(500, function () {
 })
 ```
 
-You will need to add the maximum value to be plotted on the graph. Replace the `0` to the right of the `plot bar graph`{:class='microbitled'} block with your maximum value.
+You will need to add the maximum value to be plotted on the graph. Replace the second `0` in the `plot bar graph`{:class='microbitled'} block with your maximum value.
 
 In this example, 1023 has been used, which is the maximum value of acceleration in mg that can be sensed by the accelerometer. The maximum value will be different for other sensors.
 
