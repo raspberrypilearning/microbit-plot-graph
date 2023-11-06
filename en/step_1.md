@@ -4,7 +4,7 @@ You can plot a bar graph on the LEDs to show values from the sensors.
 
 In this example, accelerometer values are plotted as a bar graph.
 
-From inside the `Led`{:class='microbitled'} menu, you can find the `plot bar graph`{:class='microbitled'} block.
+You can find the `plot bar graph`{:class='microbitled'} block in the `Led`{:class='microbitled'} menu.
 
 <img src="images/led-menu.png" alt="The Led menu with the 'plot bar graph' block highlighted." width="350"/>
 
@@ -19,9 +19,9 @@ loops.everyInterval(500, function () {
 })
 ```
 
-From the `Input`{:class='microbitinput'} menu, you can find the `acceleration`{:class='microbitinput'} block.
+From the `Input`{:class='microbitinput'} menu, get the `acceleration`{:class='microbitinput'} block.
 
-Place the `acceleration`{:class='microbitinput'} block inside the `0` to the left of the `plot bar graph`{:class='microbitled'} block.
+Place the `acceleration`{:class='microbitinput'} block inside the first `0` in the `plot bar graph`{:class='microbitled'} block.
 
 ```microbit
 loops.everyInterval(500, function () {
@@ -32,9 +32,9 @@ loops.everyInterval(500, function () {
 })
 ```
 
-Inside the `0` to the right of the `plot bar graph`{:class='microbitled'} block, you will need to add the maximum value to be plotted on the graph.
+You will need to add the maximum value to be plotted on the graph. Replace the second `0` in the `plot bar graph`{:class='microbitled'} block with your maximum value.
 
-In this example, 1023 has been used. This value is the maximum mg that can be sensed, but this value will be different for other sensors.
+In this example, 1023 has been used, which is the maximum value of acceleration in mg that can be sensed by the accelerometer. The maximum value will be different for other sensors.
 
 ```microbit
 loops.everyInterval(500, function () {
