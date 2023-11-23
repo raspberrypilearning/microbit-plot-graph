@@ -1,14 +1,14 @@
-You can plot a bar graph on the LEDs to show values from the sensors.
+Je kunt een staafdiagram tekenen met de lichtjes om waarden van de sensoren weer te geven.
 
-### Plot bar graph
+### Teken een staafdiagram
 
-In this example, accelerometer values are plotted as a bar graph.
+In dit voorbeeld worden de waarden van de versnellingsmeter weergegeven in een staafdiagram.
 
-You can find the `plot bar graph`{:class='microbitled'} block in the `Led`{:class='microbitled'} menu.
+Je kunt het blok `plot bar graph`{:class='microbitled'} vinden in het menu `Lichtjes`{:class='microbitled'}.
 
 <img src="images/led-menu.png" alt="The Led menu with the 'plot bar graph' block highlighted." width="350"/>
 
-Place the `plot bar graph`{:class='microbitled'} block inside an event block or a loop block. The `every`{:class='microbitloops'} block has been used in this example.
+Plaats het blok `plot bar graph`{:class='microbitled'} in een gebeurtenisblok of een lusblok. Het `elk (ms)`{:class='microbitloops'} blok is in dit voorbeeld gebruikt.
 
 ```microbit
 loops.everyInterval(500, function () {
@@ -19,9 +19,9 @@ loops.everyInterval(500, function () {
 })
 ```
 
-From the `Input`{:class='microbitinput'} menu, get the `acceleration`{:class='microbitinput'} block.
+Haal vanuit het menu `Invoer`{:class='microbitinput'} het blok `versnelling (mg)`{:class='microbitinput'} op.
 
-Place the `acceleration`{:class='microbitinput'} block inside the first `0` in the `plot bar graph`{:class='microbitled'} block.
+Plaats het `versnelling (mg)`{:class='microbitinput'} blok binnen de eerste `0` in het `plot bar graph`{:class='microbitled'} blok.
 
 ```microbit
 loops.everyInterval(500, function () {
@@ -32,9 +32,9 @@ loops.everyInterval(500, function () {
 })
 ```
 
-You will need to add the maximum value to be plotted on the graph. Replace the second `0` in the `plot bar graph`{:class='microbitled'} block with your maximum value.
+Je moet de maximale waarde die in de grafiek getekend kan worden toevoegen. Vervang de tweede `0` in het `plot bar graph`{:class='microbitled'} blok door je maximale waarde.
 
-In this example, 1023 has been used, which is the maximum value of acceleration in mg that can be sensed by the accelerometer. The maximum value will be different for other sensors.
+In dit voorbeeld is 1023 gebruikt, wat de maximale versnellingswaarde in mg is die door de versnellingsmeter kan worden waargenomen. Voor andere sensoren zal de maximale waarde anders zijn.
 
 ```microbit
 loops.everyInterval(500, function () {
@@ -45,6 +45,6 @@ loops.everyInterval(500, function () {
 })
 ```
 
-The LEDs on the micro:bit will light up to show the value of the sensor being recorded up to the maximum value field.
+De LED's op de micro:bit gaan branden om de waarde van de sensor die wordt geregistreerd weer te geven tot aan het maximale waardeveld.
 
-![The LED display lighting up to show the values from the sensor being recorded.](images/led-display.gif)
+![Het LED-display licht op om de waarden van de sensor die worden geregistreerd weer te geven.](images/led-display.gif)
