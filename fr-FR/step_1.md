@@ -1,14 +1,14 @@
-You can plot a bar graph on the LEDs to show values from the sensors.
+Tu peux tracer un graphique à barres sur les LED pour afficher les valeurs des capteurs.
 
-### Plot bar graph
+### Tracer un graphique à barres
 
-In this example, accelerometer values are plotted as a bar graph.
+Dans cet exemple, les valeurs de l'accéléromètre sont tracées sous la forme d'un graphique à barres.
 
-You can find the `plot bar graph`{:class='microbitled'} block in the `Led`{:class='microbitled'} menu.
+Tu peux trouver le bloc `tracer graphique en barres`{:class='microbitled'} dans le menu `LED`{:class='microbitled'}.
 
 <img src="images/led-menu.png" alt="The Led menu with the 'plot bar graph' block highlighted." width="350"/>
 
-Place the `plot bar graph`{:class='microbitled'} block inside an event block or a loop block. The `every`{:class='microbitloops'} block has been used in this example.
+Place le bloc `tracer graphique en barres`{:class='microbitled'} à l'intérieur d'un bloc événement ou d'un bloc boucle. Le bloc `chaque`{:class='microbitloops'} a été utilisé dans cet exemple.
 
 ```microbit
 loops.everyInterval(500, function () {
@@ -19,9 +19,9 @@ loops.everyInterval(500, function () {
 })
 ```
 
-From the `Input`{:class='microbitinput'} menu, get the `acceleration`{:class='microbitinput'} block.
+Dans le menu `Entrée`{:class='microbitinput'}, prends le bloc `accélération`{:class='microbitinput'}.
 
-Place the `acceleration`{:class='microbitinput'} block inside the first `0` in the `plot bar graph`{:class='microbitled'} block.
+Place le bloc `accélération`{:class='microbitinput'} à l'intérieur du premier `0` dans le bloc `tracer graphique en barres`{:class='microbitled'}.
 
 ```microbit
 loops.everyInterval(500, function () {
@@ -32,9 +32,9 @@ loops.everyInterval(500, function () {
 })
 ```
 
-You will need to add the maximum value to be plotted on the graph. Replace the second `0` in the `plot bar graph`{:class='microbitled'} block with your maximum value.
+Tu devras ajouter la valeur maximale à tracer sur le graphique. Remplace le deuxième `0` dans le bloc `tracer graphique en barres`{:class='microbitled'} avec ta valeur maximale.
 
-In this example, 1023 has been used, which is the maximum value of acceleration in mg that can be sensed by the accelerometer. The maximum value will be different for other sensors.
+Dans cet exemple, 1023 a été utilisé, ce qui correspond à la valeur maximale d'accélération en mg pouvant être détectée par l'accéléromètre. La valeur maximale sera différente pour les autres capteurs.
 
 ```microbit
 loops.everyInterval(500, function () {
@@ -45,6 +45,6 @@ loops.everyInterval(500, function () {
 })
 ```
 
-The LEDs on the micro:bit will light up to show the value of the sensor being recorded up to the maximum value field.
+Les LED sur le micro:bit s'allumeront pour montrer la valeur du capteur enregistré jusqu'à la valeur maximale.
 
-![The LED display lighting up to show the values from the sensor being recorded.](images/led-display.gif)
+![L'écran LED s'allume pour afficher les valeurs du capteur en cours d'enregistrement.](images/led-display.gif)
